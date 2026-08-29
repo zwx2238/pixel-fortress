@@ -31,7 +31,8 @@ export default {
         },
         // Mouse/Camera zoom (for viewport control)
         CAMERA: {
-            TILES: window.innerWidth <= 600 || window.innerHeight <= 600 ? 10 : 16,
+            TILES: (globalThis.innerWidth ?? 1024) <= 600 ||
+                   (globalThis.innerHeight ?? 768) <= 600 ? 10 : 16,
             FACTOR: 0.05,
             MAX: 6,
             MIN: 1,
@@ -153,7 +154,10 @@ export default {
 
     // ===== PATHFINDING =====
     PATHFINDING: {
-        NUM_WORKERS: Math.max(1, Math.min(navigator.hardwareConcurrency - 1 || 2, 5)), // Dynamic: 1-5 workers based on CPU cores
+        NUM_WORKERS: Math.max(
+            1,
+            Math.min((globalThis.navigator?.hardwareConcurrency ?? 2) - 1 || 2, 5)
+        ), // Dynamic: 1-5 workers based on CPU cores
         MAX_CONCURRENT_PER_WORKER: 4 // Max concurrent pathfinding requests per worker
     },
 

@@ -26,7 +26,7 @@ import gameState from 'state'
 // Toggle individual tracking categories without touching the rest of the code.
 // Add new keys here when expanding what the game tracks.
 const ANALYTICS_CONFIG = {
-  enabled: true,
+  enabled: false,
 
   events: {
     // Fired once when a game session transitions to 'playing'
