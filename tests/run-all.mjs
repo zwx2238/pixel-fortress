@@ -26,9 +26,14 @@ console.log('Running Pixel Fortress test suite...\n')
 // Active tests
 import './utils.test.mjs'
 import './seed.test.mjs'
+import './promotion-cleanup.test.mjs'
 
 // Disabled tests
 // import './map-generation.test.mjs'      // Requires Node.js loader for import maps
 // import './playerColorFilter.test.mjs'   // Requires Node.js loader for import maps (imports pixijs)
 
-console.log('\n✓ All tests completed successfully')
+if (process.exitCode) {
+  console.log('\n✗ Tests failed')
+} else {
+  console.log('\n✓ All tests completed successfully')
+}

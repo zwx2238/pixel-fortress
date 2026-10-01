@@ -1,6 +1,6 @@
 'use strict'
 
-const CACHE_NAME = 'PixelFortress_Cache_0.0.4'
+const CACHE_NAME = 'PixelFortress_Cache_0.0.4.1'
 
 const CACHED_URLS = [
   '',
@@ -83,7 +83,6 @@ const CACHED_URLS = [
   // Assets - Icons
   'assets/icons/external-link.svg',
   'assets/icons/github.svg',
-  'assets/icons/kofi_symbol.png',
   'assets/icons/music.svg',
   'assets/icons/music-solid.svg',
   'assets/icons/pause.svg',
